@@ -1,0 +1,27 @@
+baseurl = "https://tamanishi.net"
+languageCode = "en-us"
+theme = 'hugo-PaperMod'
+
+[params]
+disableThemeToggle = true
+defaultTheme = "dark"
+
+[params.profileMode]
+enabled = true
+title = "Masayuki Sunahara"
+subtitle = "Software, self made keyboards and so."
+imageUrl = "images/avatar_256_waifu2x.png"
+imageWidth = 200
+imageHeight = 200
+
+[[params.socialIcons]]
+name = "GitHub"
+url = "https://github.com/tamanishi"
+
+[[params.socialIcons]]
+name = "X"
+url = "https://x.com/tamanishi"
+
+[[params.socialIcons]]
+name = "Bluesky"
+url = "https://bsky.app/profile/tamanishi.bsky.social"

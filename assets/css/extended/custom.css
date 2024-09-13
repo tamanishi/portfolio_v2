@@ -1,0 +1,45 @@
+.dark.list {
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dark.list::before {
+    content: '';
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    bottom: -7px;
+    background: inherit;
+    position: absolute;
+    z-index: -1;
+}
+
+.list {
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.list::before {
+    content: '';
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    bottom: -7px;
+    background: inherit;
+    position: absolute;
+    z-index: -1;
+}
