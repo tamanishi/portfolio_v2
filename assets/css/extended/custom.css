@@ -51,18 +51,22 @@
     transition: all 0.4s ease-out;
 }
 
-.profile img:hover {
-    transition: all 0.25s ease-in;
-    border-color: #FF8800;
+@media (hover: hover) and (pointer: fine) {
+    .profile img:hover {
+        transition: all 0.25s ease-in;
+        border-color: #FF8800;
+    }
 }
 
 .social-icons a {
     transition: all 0.4s ease-out;
 }
 
-.social-icons a:hover {
-    transition: all 0.25s ease-in;
-    color: #FF8800;
+@media (hover: hover) and (pointer: fine) {
+    .social-icons a:hover {
+        transition: all 0.25s ease-in;
+        color: #FF8800;
+    }
 }
 
 .social-icons a svg {
