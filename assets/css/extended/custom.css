@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .dark.list::before {
@@ -12,10 +13,10 @@
     -o-filter: blur(7px);
     -ms-filter: blur(7px);
     filter: blur(7px);
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     background: inherit;
     position: absolute;
     z-index: -1;
@@ -26,6 +27,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .list::before {
@@ -35,10 +37,10 @@
     -o-filter: blur(7px);
     -ms-filter: blur(7px);
     filter: blur(7px);
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     background: inherit;
     position: absolute;
     z-index: -1;
@@ -76,4 +78,8 @@
 
 .profile_inner span {
     font-size: 24px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
