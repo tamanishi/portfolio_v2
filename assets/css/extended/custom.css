@@ -43,3 +43,33 @@
     position: absolute;
     z-index: -1;
 }
+
+.profile img {
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-width: thick;
+    transition: all 0.4s ease-out;
+}
+
+.profile img:hover {
+    transition: all 0.25s ease-in;
+    border-color: #FF8800;
+}
+
+.social-icons a {
+    transition: all 0.4s ease-out;
+}
+
+.social-icons a:hover {
+    transition: all 0.25s ease-in;
+    color: #FF8800;
+}
+
+.social-icons a svg {
+    height: 48px;
+    width: 48px;
+}
+
+.profile_inner span {
+    font-size: 24px;
+}
