@@ -10,7 +10,7 @@ defaultTheme = "dark"
 enabled = true
 title = "Masayuki Sunahara"
 subtitle = "Software, self made keyboards and so."
-imageUrl = "images/avatar_256_waifu2x.png"
+imageUrl = "images/avatar_256_waifu2x.webp"
 imageWidth = 200
 imageHeight = 200
 
