@@ -24,7 +24,7 @@ url = "https://x.com/tamanishi"
 
 [[params.socialIcons]]
 name = "Bluesky"
-url = "https://bsky.app/profile/tamanishi.bsky.social"
+url = "https://bsky.app/profile/tamanishi.net"
 
 [params.assets]
 favicon32x32 = "images/favicon-32x32.png"
