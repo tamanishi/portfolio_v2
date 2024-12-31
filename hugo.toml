@@ -1,6 +1,10 @@
 baseurl = "https://tamanishi.net"
 languageCode = "en-us"
-theme = 'hugo-PaperMod'
+# theme = 'hugo-PaperMod'
+
+[module]
+[[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
 
 [params]
 disableThemeToggle = true
