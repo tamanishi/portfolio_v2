@@ -14,34 +14,29 @@ main() {
 
   DART_SASS_VERSION=1.89.2
   HUGO_VERSION=0.148.0
+  if [[ $(uname) == 'Darwin' ]]; then
+    DART_SASS_ARCH=macos-arm64
+    HUGO_ARCH=darwin-universal
+  else
+    DART_SASS_ARCH=linux-x64
+    HUGO_ARCH=linux-amd64
+  fi
 
   export TZ=Asia/Tokyo
 
   # Install Dart Sass
   echo "Installing Dart Sass v${DART_SASS_VERSION}..."
-  if [[ $(uname) == 'Darwin' ]]; then
-    curl -LJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-macos-arm64.tar.gz"
-    tar -xf "dart-sass-${DART_SASS_VERSION}-macos-arm64.tar.gz"
-  else
-    curl -LJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
-    tar -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
-  fi
+  curl -LJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-${DART_SASS_ARCH}.tar.gz"
+  tar -xf "dart-sass-${DART_SASS_VERSION}-${DART_SASS_ARCH}.tar.gz"
   cp -r dart-sass/ /opt/buildhome
   rm -rf dart-sass*
 
   # Install Hugo
   echo "Installing Hugo v${HUGO_VERSION}..."
-  if [[ $(uname) == 'Darwin' ]]; then
-    curl -LJO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz
-    tar -xf "hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz"
-    mv hugo /opt/buildhome
-    rm LICENSE README.md hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz
-  else
-    curl -LJO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz
-    tar -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-    mv hugo /opt/buildhome
-    rm LICENSE README.md hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz
-  fi
+  curl -LJO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_${HUGO_ARCH}.tar.gz
+  tar -xf "hugo_extended_${HUGO_VERSION}_${HUGO_ARCH}.tar.gz"
+  mv hugo /opt/buildhome
+  rm LICENSE README.md hugo_extended_${HUGO_VERSION}_${HUGO_ARCH}.tar.gz
 
   # Set PATH
   echo "Setting the PATH environment variable..."
