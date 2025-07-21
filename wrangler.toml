@@ -1,0 +1,11 @@
+name = "portfolio_v2"
+compatibility_date = "2024-11-11"
+preview_urls = true
+workers_dev = true
+
+[build]
+command = "./build.sh"
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
