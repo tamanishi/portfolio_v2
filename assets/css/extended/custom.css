@@ -1,50 +1,29 @@
-.dark.list {
-    /* background-image: url("/images/background.jpg"); */
+.dark.list::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-image: url("/images/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.dark.list::before {
-    content: '';
-    -webkit-filter: blur(7px);
-    -moz-filter: blur(7px);
-    -o-filter: blur(7px);
-    -ms-filter: blur(7px);
     filter: blur(7px);
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: inherit;
-    position: absolute;
+    opacity: 0.7;
     z-index: -1;
-}
-
-.list {
-    background-image: url("/images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    pointer-events: none;
 }
 
 .list::before {
     content: '';
-    -webkit-filter: blur(7px);
-    -moz-filter: blur(7px);
-    -o-filter: blur(7px);
-    -ms-filter: blur(7px);
-    filter: blur(7px);
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: inherit;
     position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("/images/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(7px);
+    opacity: 0.7;
     z-index: -1;
+    pointer-events: none;
 }
 
 .profile img {
