@@ -8,6 +8,7 @@ path = "github.com/adityatelange/hugo-PaperMod"
 [params]
 disableThemeToggle = true
 defaultTheme = "dark"
+author = "Masayuki Sunahara"
 
 [params.profileMode]
 enabled = true
